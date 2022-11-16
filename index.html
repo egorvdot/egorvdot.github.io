@@ -1,0 +1,10 @@
+---
+layout: default
+title: Передняя
+---
+<p>Привет, дорогой!</p>
+<div>
+  {% for post in site.posts %}
+    <p><a href={{ post.url }}> {{ post.title }} </a> — {{ post.date | date: "%a, %b %d, %y" }}</p>
+  {% endfor %}
+</div>
