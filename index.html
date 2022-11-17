@@ -1,10 +1,10 @@
 ---
 layout: default
 title: Передняя
+description: Привет, дорогой
 ---
-<p>Привет, дорогой!</p>
 <div>
   {% for post in site.posts %}
-    <p><a href={{ post.url }}> {{ post.title }} </a> — {{ post.date | date: "%a, %b %d, %y" }}</p>
+  <h1><a href={{ post.url }}> {{ post.title }} </a> — {{ post.date | date: "%a, %b %d, %y" }}</h1>
   {% endfor %}
 </div>
