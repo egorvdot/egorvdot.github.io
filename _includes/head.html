@@ -1,9 +1,13 @@
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content={{ page.description | default: site.description | quote }}>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>{{ page.title }} — {{ site.title }}</title>
     <base href={{ site.url }} target="_blank">
     <link rel="shortcut icon" type="image/png" href="/favicon.ico">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    {% include head-custom.html %}
 </head>

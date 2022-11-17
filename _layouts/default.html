@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html lang={{ page.lang | default: site.lang | default: "ru" }}>
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body>
-    {{ content }}
-  </body>
+<body>
+  <header>
+    <h1>{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+    <p>{{ page.description | default: site.description | default: site.github.project_tagline }}</p>
+  </header>
+
+  <div class="wrapper">
+    <nav>
+      <ul></ul>
+    </nav>
+    <section>
+      {{ content }}
+
+    </section>
+    <footer>
+      {% if site.github.is_project_page %}
+        <p>Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+      {% endif %}
+      <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/mattgraham">mattgraham</a></small></p>
+    </footer>
+  </div>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="{{ '/assets/js/respond.js' | relative_url }}"></script>
+</body>
 
 </html>
