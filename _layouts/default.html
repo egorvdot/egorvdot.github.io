@@ -12,11 +12,18 @@
     </header>
 
     <aside class="aside">
-      <nav>
-        <ul>
-          <li><a href="#">Ссылка 1</a></li>
-          <li><a href="#">Ссылка 2</a></li>
-          <li><a href="#">Ссылка 3</a></li>
+      <a id="menu-icon">&#9776; Меню</a>
+      <nav class="navbar">
+        <ul class="menu">
+          <li>
+            <a href="#">Ссылка 1</a>
+          </li>
+          <li>
+            <a href="#">Ссылка 2</a>
+          </li>
+          <li>
+            <a href="#">Ссылка 3</a>
+          </li>
         </ul>
       </nav>
     </aside>
@@ -39,6 +46,14 @@
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"
     integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
   <script src="{{ '/assets/js/respond.js' | relative_url }}"></script>
+  <script>
+    $(document).ready(function () {
+      $('#menu-icon').on('click', function () {
+        $('.navbar').toggleClass('expand');
+        return false;
+      });
+    });
+  </script>
 </body>
 
 </html>
