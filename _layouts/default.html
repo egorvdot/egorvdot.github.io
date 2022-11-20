@@ -4,22 +4,11 @@
 {% include head.html %}
 
 <body>
-  <div class="app">
-    <header class="header">
-      <h1>{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-      <p>{{ page.description | default: site.description | default: site.github.project_tagline }}</p>
-      <hr />
-    </header>
-
+  <div class="page">
+    {% include header.html %}
     {{ content }}
-
-    <footer class="footer">
-      {% if site.github.is_project_page %}
-      <p>Блог ведёт <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-      {% endif %}
-    </footer>
+    {% include footer.html %}
   </div>
-
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"
     integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
   <script src="{{ '/assets/js/respond.js' | relative_url }}"></script>

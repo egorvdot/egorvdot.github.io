@@ -1,0 +1,25 @@
+@import "constants";
+
+.page {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 0fr 1fr 0fr;
+
+    @media (min-width: $desktop-min-width) {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    .header {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    .main {
+        grid-column: 2;
+    }
+
+    .footer {
+      grid-column: 2;
+      text-align: center;
+    }
+}

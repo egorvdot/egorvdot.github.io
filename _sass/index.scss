@@ -1,0 +1,60 @@
+@import "constants";
+@import "page";
+
+.page .preview {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+    transition: box-shadow $transition-timeout ease;
+
+    @media (min-width: $desktop-min-width) {
+        &:hover {
+            box-shadow: 0.5rem -0.5rem 1rem #ffcc005a;
+
+            a .preview-title .preview-title-text {
+                background-color: #e8e8e8;
+                color: $main-background-color;
+            }
+        }
+    }
+
+    a {
+        display: block;
+        position: relative;
+        height: 0;
+        padding-bottom: 50%;
+
+        .preview-title {
+            text-align: center;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0.5vh;
+
+            @media (min-width: $desktop-min-width) {
+                bottom: 1vh;
+            }
+        }
+
+        .preview-title-text {
+            background-color: $main-background-color;
+            font-size: 1rem;
+            padding-bottom: 0;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            padding-top: 0.125rem;
+
+            @media (min-width: $desktop-min-width) {
+                font-size: 2rem;
+                padding-bottom: 0;
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+                padding-top: 0.4rem;
+                transition:
+                    background-color $transition-timeout ease,
+                    color $transition-timeout ease;
+            }
+        }
+    }
+}

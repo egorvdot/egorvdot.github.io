@@ -4,15 +4,15 @@ title: Передняя
 description: Привет, дорогой!
 ---
 <main class="main">
-  <section class="main-section">
+  <section>
     {% for post in site.posts %}
-      <article style="background-image: url(assets/images/{{post.image_preview}});">
-        <a href={{ post.url }}>
-          <div class="article-title">
-            <span>{{ post.title }}</span>
-          </div>
-        </a>
-      </article>
+    <article class="preview" style="background-image: url(assets/images/{{post.image_preview}});">
+      <a href={{ post.url }}>
+        <div class="preview-title">
+          <span class="preview-title-text">{{ post.title }}</span>
+        </div>
+      </a>
+    </article>
     {% endfor %}
   </section>
 </main>
