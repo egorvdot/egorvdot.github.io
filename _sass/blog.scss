@@ -3,6 +3,7 @@
 @import "rouge-base16-dark.scss";
 
 $main-background-color: #252525;
+$desktop-min-width: 768px;
 
 @function toRem($value) {
     $remValue: ($value / 16) + rem;	
@@ -76,12 +77,12 @@ a {
   }
 }
 
-a small {
-  font-size: toRem(11);
-  color:#666;
-  margin-top: -0.6em;
-  display:block;
-}
+// a small {
+//   font-size: toRem(11);
+//   color:#666;
+//   margin-top: -0.6em;
+//   display:block;
+// }
 
 ul {
   list-style-image:url('../images/bullet.png');
@@ -200,7 +201,7 @@ header {
   padding: 0.5rem 2rem;
   @include hover-menu-link;
 
-  @media (min-width: 768px) {
+  @media (min-width: $desktop-min-width) {
     display: none;
   }
 }
@@ -234,7 +235,7 @@ header {
 		}
 	}
 
-  @media (min-width: 768px) {
+  @media (min-width: $desktop-min-width) {
     max-height: none;
     overflow: auto;
     transition: none;
@@ -249,20 +250,6 @@ header {
       &:hover {
         background-color: transparent;
       }
-    }
-  }
-}
-
-.article {
-  background-color: #3f424677;
-  border-radius: toRem(16);
-  padding: toRem(32);
-  transition: box-shadow 150ms ease-in-out;
-
-  &__list-item {
-    &:hover {
-      box-shadow: toRem(8) toRem(-6) toRem(12) #ffcc0022;
-  
     }
   }
 }
@@ -300,6 +287,55 @@ header {
 
     .main-section {
       padding: 0 toRem(16);
+    }
+  }
+
+  article {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: toRem(16);
+      transition: box-shadow 0.5s ease;
+  
+    @media (min-width: 768px) {
+      &:hover {
+        box-shadow: toRem(8) toRem(-6) toRem(12) #ffcc005a;
+        a .article-title span {
+          background-color: #e8e8e8;
+          color: $main-background-color;
+        }
+      }
+    }
+
+    a {
+      display: block;
+      padding-top: 40%;
+      position: relative;
+
+      .article-title {
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+
+      span {
+        background-color: $main-background-color;
+        font-size: 1.25rem;
+        padding-bottom: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.25rem;
+        transition: background-color 0.5s ease, color 0.5s ease;
+
+        @media (min-width: 768px) {
+          font-size: 2rem;
+        }
+      }
     }
   }
 

@@ -1,10 +1,18 @@
 ---
 layout: default
 title: Передняя
-description: Привет, дорогой
+description: Привет, дорогой!
 ---
-<article class="article article__list-item">
-  {% for post in site.posts %}
-  <h2><a href={{ post.url }}> {{ post.title }} </a> — {{ post.date | date: "%a, %b %d, %y" }}</h2>
-  {% endfor %}
-</article>
+<main class="main">
+  <section class="main-section">
+    {% for post in site.posts %}
+      <article style="background-image: url(assets/images/{{post.image_preview}});">
+        <a href={{ post.url }}>
+          <div class="article-title">
+            <span>{{ post.title }}</span>
+          </div>
+        </a>
+      </article>
+    {% endfor %}
+  </section>
+</main>

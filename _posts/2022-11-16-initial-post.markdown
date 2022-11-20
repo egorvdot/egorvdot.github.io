@@ -5,7 +5,12 @@ description: >-
   Пояснение мотивации к ведению блога и ожиданиям от него.
 date: 2022-11-16 23:00:00 +0300
 categories: blog
+image_preview: 2022-11-16-initial-post-preview.jpeg
+image_head: 2022-11-16-initial-post-head.jpeg
 ---
+<div>
+  <img src="{{ image_head }}" height="100" />
+</div>
 
 2022 год выдался богатым на масштабные события. <br>
 Одним из череды таковых стал для меня этот сайт. <br>
