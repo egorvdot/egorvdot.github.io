@@ -2,7 +2,7 @@ title: Egor V.
 description: Возьми нам по пиву!
 email: i@egorvdot.com
 
-# url: "https://egorvdot.ru"
-url: "http://localhost:4000"
+url: "https://egorvdot.ru"
+# url: "http://localhost:4000"
 baseurl: "/"
 markdown: kramdown
