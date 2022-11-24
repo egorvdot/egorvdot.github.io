@@ -1,9 +1,11 @@
 @import "normalize";
-// @import "fonts";
-// @import "rouge-base16-dark.scss";
+@import "fonts";
+@import "rouge-base16-dark.scss";
 @import "constants";
+@import "header";
 @import "index";
 @import "post";
+@import "social";
 
 @function toRem($value) {
     $remValue: ($value / 16) + rem;	
@@ -162,29 +164,4 @@ dt {
   color:#F0E7D5;
   font-family: 'OpenSansSemibold', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-weight: normal;
-}
-
-header {
-  padding: toRem(20) toRem(20) 0 toRem(20);
-  margin: 0;
-
-  h1 {
-    font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: normal;
-    font-size: toRem(40);
-    text-align: center;
-    line-height: toRem(36);
-  }
-
-  p { 
-    color: #d7cfbe;
-    font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: normal;
-    font-size: toRem(18);
-    text-align: center;
-  }
-
-  hr {
-    margin: 0;
-  }
 }

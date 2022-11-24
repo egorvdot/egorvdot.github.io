@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Об авторе
 permalink: /about/
 ---

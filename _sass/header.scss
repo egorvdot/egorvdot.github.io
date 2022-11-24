@@ -1,0 +1,44 @@
+@import "constants";
+
+.page .header .header-content {
+    grid-column: 2;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+
+    .header-connect {
+        align-self: center;
+        justify-self: center;
+    }
+}
+
+.page .header-about {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 4rem;
+    transition: box-shadow $transition-timeout ease;
+    width: 90%;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column: 2;
+    justify-self: center;
+
+    @media (min-width: $desktop-min-width) {
+        &:hover {
+            box-shadow: 0 0 1rem #ffffff7c;
+        }
+    }
+
+    a {
+        display: block;
+        position: relative;
+        height: 0;
+        padding-bottom: 130%;
+    }
+}
+
+.page .header hr {
+    position: relative;
+}

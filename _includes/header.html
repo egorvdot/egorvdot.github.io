@@ -1,5 +1,39 @@
 <header class="header">
-    <h1>{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-    <p>{{ page.description | default: site.description | default: site.github.project_tagline }}</p>
-    <hr />
+    <div class="header-content">
+        <div class="header-connect">
+            <a href="https://github.com/egorvdot" target="_blank" title="Egor V.'s GitHub Link">
+                <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 16 16">
+                    {%- include social-icons/github.svg -%}
+                </svg>
+            </a>
+        </div>
+        <div class="header-about" style="background-image: url(assets/images/me.png);">
+            <a href="{{ site.url }}/about" title="Мое фото"></a>
+        </div>
+        <div class="header-connect">
+            <a href="https://t.me/egorvdot" target="_blank" title="Egor V.'s Telegram Link">
+                <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 16 16">
+                    {%- include social-icons/telegram.svg -%}
+                </svg>
+            </a>
+        </div>
+        <div class="header-connect">
+            <a href="mailto:egorvdot@gmail.com" target="_blank" title="Egor V.'s Email Address">
+                <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 16 16">
+                    {%- include social-icons/email.svg -%}
+                </svg>
+            </a>
+        </div>
+        <div class="header-connect">
+            <a href="https://twitter.com/egorvdot" target="_blank" title="Egor V.'s Twitter Link">
+                <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 16 16">
+                    {%- include social-icons/twitter.svg -%}
+                </svg>
+            </a>
+        </div>
+    </div>
 </header>
