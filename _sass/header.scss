@@ -1,28 +1,53 @@
 @import "constants";
 
 .header-content {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     grid-column: 2;
     display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: 1fr 1hr 1fr;
+    grid-gap: 0.5rem;
+    grid-template-columns: 1fr 3fr 3fr;
+
+    @media (min-width: $display-480px-width) {
+        grid-template-columns: 1fr 3fr 2fr;
+    }
+
+    @media (min-width: $display-640px-width) {
+        grid-template-columns: 1fr 5fr 2fr;
+    }
+
+    @media (min-width: $display-800px-width) {
+        grid-template-columns: 1fr 10fr 3fr;
+    }
 
     @media (min-width: $desktop-min-width) {
-        grid-template-columns: 1fr 1hr 4fr;
+        grid-template-columns: 1fr 3fr 1fr;
     }
 
     .header-about {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        margin-left: 2rem;
-        width: 3rem;
         height: 0;
+        width: 3rem;
         padding-bottom: 3rem;
-        border-radius: 4rem;
+        border-radius: 3rem;
+
+        @media (min-width: $display-480px-width) {
+            width: 3.5rem;
+            padding-bottom: 3.5rem;
+        }
+
+        @media (min-width: $display-640px-width) {
+            width: 4rem;
+            padding-bottom: 4rem;
+        }
+
+        @media (min-width: $display-800px-width) {
+            width: 4.5rem;
+            padding-bottom: 4.5rem;
+        }
 
         @media (min-width: $desktop-min-width) {
-            margin-left: 1rem;
             width: 5rem;
             padding-bottom: 5rem;
             transition: box-shadow $transition-timeout ease;
@@ -38,6 +63,18 @@
             height: 0;
             padding-bottom: 3rem;
 
+            @media (min-width: $display-480px-width) {
+                padding-bottom: 3.5rem;
+            }
+
+            @media (min-width: $display-640px-width) {
+                padding-bottom: 4rem;
+            }
+
+            @media (min-width: $display-800px-width) {
+                padding-bottom: 4.5rem;
+            }
+
             @media (min-width: $desktop-min-width) {
                 padding-bottom: 5rem;
             }
@@ -51,6 +88,18 @@
         h1 {
             font-size: 1rem;
 
+            @media (min-width: $display-480px-width) {
+                font-size: 1.25rem;
+            }
+
+            @media (min-width: $display-640px-width) {
+                font-size: 1.5rem;
+            }
+
+            @media (min-width: $display-800px-width) {
+                font-size: 1.75rem;
+            }
+
             @media (min-width: $desktop-min-width) {
                 font-size: 2rem;
             }
@@ -60,19 +109,9 @@
     .header-social {
         align-self: center;
         justify-self: right;
-        grid-column: 3;
-        margin-right: 2rem;
-
-        @media (min-width: $desktop-min-width) {
-            margin-right: 1rem;
-        }
 
         a {
             margin-left: 0.5rem;
-
-            @media (min-width: $desktop-min-width) {
-                margin-left: 2rem;
-            }
         }
     }
 }
