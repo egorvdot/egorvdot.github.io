@@ -1,6 +1,6 @@
 @import "constants";
 
-.page {
+.content {
     display: grid;
     grid-gap: 2rem;
     grid-template-columns: 0fr 1fr 0fr;
@@ -10,11 +10,14 @@
     }
 
     .header {
-        margin-top: 1rem;
         grid-column-start: 1;
         grid-column-end: 4;
         display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-columns: 0fr 1fr 0fr;
+
+        @media (min-width: $desktop-min-width) {
+            grid-template-columns: 1fr 2fr 1fr;
+        }
     }
 
     .main {

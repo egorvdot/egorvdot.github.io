@@ -1,5 +1,5 @@
 @import "constants";
-@import "page";
+@import "content";
 
 @mixin hover-menu-link {
     &:hover {
@@ -67,7 +67,7 @@
     }
 }
 
-.page {
+.content {
     .aside {
         grid-column: 1;
         text-align: right;
@@ -76,90 +76,4 @@
     .main {
         grid-column: 2;
     }
-
-    // .article__ {
-    //     background-position: center;
-    //     background-repeat: no-repeat;
-    //     background-size: cover;
-    //     border-radius: toRem(16);
-    //     transition: box-shadow 0.5s ease;
-
-    //     @media (min-width: $desktop-min-width) {
-    //         &:hover {
-    //             box-shadow: toRem(8) toRem(-6) toRem(12) #ffcc005a;
-
-    //             a .article-title span {
-    //                 background-color: #e8e8e8;
-    //                 color: $main-background-color;
-    //             }
-    //         }
-    //     }
-
-    //     a {
-    //         display: block;
-    //         padding-top: 40%;
-    //         position: relative;
-
-    //         .article-title {
-    //             display: block;
-    //             position: absolute;
-    //             left: 0;
-    //             right: 0;
-    //             bottom: 1rem;
-    //             margin-left: auto;
-    //             margin-right: auto;
-    //             text-align: center;
-    //         }
-
-    //         span {
-    //             background-color: $main-background-color;
-    //             font-size: 1.25rem;
-    //             padding-bottom: 0;
-    //             padding-left: 1rem;
-    //             padding-right: 1rem;
-    //             padding-top: 0.25rem;
-    //             transition: background-color 0.5s ease, color 0.5s ease;
-
-    //             @media (min-width: $desktop-min-width) {
-    //                 font-size: 2rem;
-    //             }
-    //         }
-    //     }
-    // }
-
-    // @media (min-width: $desktop-min-width) {
-    //     grid-gap: 2rem;
-    //     grid-template-areas:
-    //         "header header"
-    //         "aside main"
-    //         "footer footer";
-    //     grid-template-rows: max-content auto;
-    //     grid-template-columns: 1fr 3fr;
-
-    //     .aside {
-    //         position: static;
-    //         top: auto;
-    //         left: auto;
-
-    //         margin-top: 0;
-    //         text-align: right;
-    //         background: transparent;
-    //         line-height: toRem(24);
-    //     }
-
-    //     .main {
-    //         margin-top: toRem(-32);
-    //         padding: toRem(32) toRem(32) toRem(32) toRem(16);
-    //         overflow: auto;
-
-    //         .main-section {
-    //             max-width: toRem(720);
-    //         }
-    //     }
-
-    //     .footer {
-    //         padding-right: 0;
-    //         text-align: center;
-    //     }
-    // }
 }

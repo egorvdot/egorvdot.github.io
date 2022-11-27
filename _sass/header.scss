@@ -1,44 +1,78 @@
 @import "constants";
 
-.page .header .header-content {
+.header-content {
+    margin-top: 1rem;
     grid-column: 2;
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: 2fr 1fr 2fr;
-    grid-template-rows: 1fr 1fr;
-
-    .header-connect {
-        align-self: center;
-        justify-self: center;
-    }
-}
-
-.page .header-about {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 4rem;
-    transition: box-shadow $transition-timeout ease;
-    width: 90%;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    grid-column: 2;
-    justify-self: center;
+    grid-template-columns: 1fr 1hr 1fr;
 
     @media (min-width: $desktop-min-width) {
-        &:hover {
-            box-shadow: 0 0 1rem #ffffff7c;
+        grid-template-columns: 1fr 1hr 4fr;
+    }
+
+    .header-about {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: 2rem;
+        width: 3rem;
+        height: 0;
+        padding-bottom: 3rem;
+        border-radius: 4rem;
+
+        @media (min-width: $desktop-min-width) {
+            margin-left: 1rem;
+            width: 5rem;
+            padding-bottom: 5rem;
+            transition: box-shadow $transition-timeout ease;
+
+            &:hover {
+                box-shadow: 0 0 1rem #ffffff7c;
+            }
+        }
+
+        a {
+            display: block;
+            position: relative;
+            height: 0;
+            padding-bottom: 3rem;
+
+            @media (min-width: $desktop-min-width) {
+                padding-bottom: 5rem;
+            }
         }
     }
 
-    a {
-        display: block;
-        position: relative;
-        height: 0;
-        padding-bottom: 130%;
-    }
-}
+    .header-title {
+        align-self: center;
+        justify-self: center;
 
-.page .header hr {
-    position: relative;
+        h1 {
+            font-size: 1rem;
+
+            @media (min-width: $desktop-min-width) {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .header-social {
+        align-self: center;
+        justify-self: right;
+        grid-column: 3;
+        margin-right: 2rem;
+
+        @media (min-width: $desktop-min-width) {
+            margin-right: 1rem;
+        }
+
+        a {
+            margin-left: 0.5rem;
+
+            @media (min-width: $desktop-min-width) {
+                margin-left: 2rem;
+            }
+        }
+    }
 }
